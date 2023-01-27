@@ -352,6 +352,38 @@ URL: {{localhost}}/products
 
 **Server:** Node, Express
 
+## Query Options
+
+| Function | Parameter | Description | Example |
+| --- | --- | --- | --- |
+| Filtering | /attribute=value | Returns all featured products | /company=ikea : returns all products from ikea |
+| Sorting | /sort=value1,-value2 | Returns sorted list of products according to the parameter options. - is used to indicate descending | /sort=name,-price : returns all products sorted in ascendign order of name and decreasing price values |
+| Selecting | /fields=value1,value2 | Returns all products with only the selected fields | /fields=company,name : returns all products with only name and company |
+| Numeric Filtering | /numericFilters=field op value | Returns all products with the filter applies | /numericFilters=price>30 : returns all products with their price above 30|
+| Paging | /page=value&limit=value | Returns all products in pages with limit specifying no of products in a page| /page=4&limit=10 : returns the 4th page with 10 products |
+
+### Products
+
+```
+GET      /products
+GET      /products/:id
+POST     /products
+PUT      /products/:id
+DELETE   /products/:id
+
+```
+
+### Categories
+
+```
+GET      /categories
+GET      /categories/:id
+POST     /categories
+PUT      /categories/:id
+DELETE   /categories/:id
+
+```
+
 ## [Postman](https://documenter.getpostman.com/view/24887117/2s8Z6savNK) ![postman-logo-icon-orange](https://user-images.githubusercontent.com/52816688/209198935-d0bfdd57-c236-4ed4-b717-90ca6dd4e290.svg) 
 Get the postman files [here.](https://documenter.getpostman.com/view/24887117/2s8Z6savNK)
 
